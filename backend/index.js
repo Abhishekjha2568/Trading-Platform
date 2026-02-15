@@ -4,13 +4,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const cookieParser = require("cookie-parser"); // Naya import
-
+const cookieParser = require("cookie-parser");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
-
 
 const authRoute = require("./Routes/AuthRoute"); 
 
@@ -19,12 +17,11 @@ const url = process.env.MONGO_URL;
 
 const app = express();
 
-
 app.use(
   cors({
-    origin: ["http://localhost:3000"], 
+    origin: ["http://localhost:3000", "https://trading-platform-gamma-six.vercel.app"], 
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // 
+    credentials: true, 
   })
 );
 
@@ -32,6 +29,10 @@ app.use(cookieParser());
 app.use(express.json()); 
 app.use(bodyParser.json());
 
+
+mongoose.connect(url)
+  .then(() => console.log("DB connected successfully"))
+  .catch((err) => console.log("DB connection error:", err));
 
 
 app.get("/allHoldings", async (req, res) => {
@@ -55,13 +56,9 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order saved");
 });
 
-
 app.use("/", authRoute); 
+
 
 app.listen(PORT, () => {
   console.log(`App started on port ${PORT}!`);
-  mongoose.connect(url);
-  console.log("DB connected");
 });
-
-
