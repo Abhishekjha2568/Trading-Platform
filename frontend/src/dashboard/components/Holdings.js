@@ -6,7 +6,7 @@ const Holdings = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("https://trading-platform-backend-ljdq.onrender.com/allHoldings").then((res) => {
       setAllHoldings(res.data);
     });
   }, []);
