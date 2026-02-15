@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/login",
+        "https://trading-platform-backend-ljdq.onrender.com/login",
         { ...inputValue },
         { withCredentials: true }
       );
