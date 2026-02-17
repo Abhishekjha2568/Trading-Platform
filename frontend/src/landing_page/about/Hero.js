@@ -5,46 +5,47 @@ function Hero() {
     <div className="container">
       <div className="row p-5 mt-5 mb-5">
         <h1 className="fs-2 text-center">
-          We pioneered the discount broking model in India
+          Building a modern trading simulation platform
           <br />
-          Now, we are breaking ground with our technology.
+          powered by scalable web technologies.
         </h1>
       </div>
 
       <div
         className="row p-5 mt-5 border-top text-muted"
-        style={{ lineHeight: "1.8", fontSize: "1.2em" }}>
+        style={{ lineHeight: "1.8", fontSize: "1.2em" }}
+      >
         <div className="col-6 p-5">
           <p>
-            We kick-started operations on the 15th of August, 2010 with the goal
-            of breaking all barriers that traders and investors face in India in
-            tearms of cost, support, and technology. We named the company
-            Zerodha, a combination of Zero and "Rodha", the Sanskrit word for
-            barrier. </p>
-          <p>Today, our disruptive pricing models and in-house
-            technology have made us the biggest stock broker in India.</p>
-          <p>Over 1+
-            Crore clients place millions of oreder every day through our
-            powerful ecosystem of investment platform, contributing over 15% of
-            all India retail trading volumes.
+            TradeFlow is a simulated trading platform built to replicate real
+            stock trading workflows for learning and experimentation purposes.
+          </p>
+
+          <p>
+            Users can explore stock data, manage virtual portfolios, and place
+            simulated buy and sell orders through an interactive dashboard.
+          </p>
+
+          <p>
+            The platform demonstrates full-stack development concepts including
+            authentication, portfolio tracking, and order execution logic.
           </p>
         </div>
+
         <div className="col-6 p-5">
           <p>
-            In addition, we run a number of popular open online educational and
-            communtiy initiatives to empower retail traders and investors.
+            This project focuses on building scalable backend services and
+            responsive frontend interfaces using modern JavaScript technologies.
           </p>
+
           <p>
-            <a href="#" style={{ textDecoration: "none" }}>
-              Rainmatter</a>
-            , our fintech fund and incubator, has
-            invested in several fintech startups with the goal of growing the
-            Indian captial markets.
+            TradeFlow helps developers and learners understand how trading
+            platforms function in real-world scenarios.
           </p>
+
           <p>
-            And yet, we are always up to something new every day. Catch up on
-            the latest updates on our blog or see what the media is saying about
-            us.
+            Continuous improvements are being added to enhance performance,
+            usability, and real-time trading simulations.
           </p>
         </div>
       </div>

@@ -5,16 +5,14 @@ import axios from "axios";
 function Navbar() {
   const navigate = useNavigate();
 
- 
   const handleLogout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/logout",
+        "https://trading-platform-backend-ljdq.onrender.com/logout",
         {},
         { withCredentials: true }
       );
       if (data.success) {
-        
         navigate("/login"); 
       }
     } catch (error) {
@@ -28,13 +26,11 @@ function Navbar() {
       style={{ backgroundColor: "#FFF" }}
     >
       <div className="container p-2">
-        <Link className="navbar-brand" to="/">
-          <img
-            src="media/images/logo.svg"
-            style={{ width: "25%" }}
-            alt="Logo"
-          />
+        {/* Logo replaced */}
+        <Link className="navbar-brand fw-bold fs-4 text-primary" to="/">
+          📈 TradeFlow
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -46,6 +42,7 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <form className="d-flex" role="search">
             <ul className="navbar-nav mb-lg-0">
@@ -74,8 +71,7 @@ function Navbar() {
                   Support
                 </Link>
               </li>
-              
-             
+
               <li className="nav-item">
                 <button 
                   className="btn btn-outline-danger btn-sm ms-lg-3 mt-1" 

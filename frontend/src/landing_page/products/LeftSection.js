@@ -13,7 +13,7 @@ function LeftSection({
     <div className="container mt-5">
       <div className="row">
         <div className="col-6">
-          {/* alt attribute added here */}
+        
           <img src={imageURL} alt={productName || "product-image"} />
         </div>
         <div className="col-6 p-5 mt-5">

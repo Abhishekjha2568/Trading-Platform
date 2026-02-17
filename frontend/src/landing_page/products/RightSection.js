@@ -8,7 +8,7 @@ function RightSection({ imageURL, productName, productDesription, learnMore }) {
           <h1>{productName}</h1>
           <p>{productDesription}</p>
           <div>
-            {/* Learn More link agar khali hai toh '#' use karega */}
+           
             <a href={learnMore || "#"}>Learn More</a>
           </div>
         </div>
