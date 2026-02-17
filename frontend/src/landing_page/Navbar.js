@@ -26,8 +26,12 @@ function Navbar() {
       style={{ backgroundColor: "#FFF" }}
     >
       <div className="container p-2">
-        {/* Logo replaced */}
-        <Link className="navbar-brand fw-bold fs-4 text-primary" to="/">
+        
+        {/* Logo */}
+        <Link
+          className="navbar-brand fw-bold fs-4 text-primary"
+          to="/"
+        >
           📈 TradeFlow
         </Link>
 
@@ -36,53 +40,46 @@ function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="d-flex" role="search">
-            <ul className="navbar-nav mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" to="/signup">
-                  Signup
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/about">
-                  About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/product">
-                  Product
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/pricing">
-                  Pricing
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/support">
-                  Support
-                </Link>
-              </li>
+        {/* Menu aligned right */}
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav mb-lg-0 align-items-lg-center">
+            <li className="nav-item">
+              <Link className="nav-link" to="/signup">Signup</Link>
+            </li>
 
-              <li className="nav-item">
-                <button 
-                  className="btn btn-outline-danger btn-sm ms-lg-3 mt-1" 
-                  onClick={handleLogout}
-                  type="button"
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
-          </form>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/product">Product</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/pricing">Pricing</Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/support">Support</Link>
+            </li>
+
+            <li className="nav-item ms-lg-3">
+              <button
+                className="btn btn-outline-danger btn-sm"
+                onClick={handleLogout}
+                type="button"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
